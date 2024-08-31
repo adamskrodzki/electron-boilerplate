@@ -51,7 +51,6 @@
     "electron-mocha": "13.0.0",
     "mocha": "10.7.3",
     "source-map-support": "0.5.21",
-    "spectron": "16.0.0",
     "style-loader": "4.0.0",
     "wdio-electron-service": "7.0.1",
     "wdio-wait-for": "3.0.11",
