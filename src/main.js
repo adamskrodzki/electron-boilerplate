@@ -4,14 +4,11 @@ import path from 'node:path';
 import url from 'node:url';
 
 import { app, Menu, ipcMain, shell } from 'electron';
-import * as remoteMain from '@electron/remote/main';
 
 import appMenuTemplate from './menu/app_menu_template';
 import editMenuTemplate from './menu/edit_menu_template';
 import devMenuTemplate from './menu/dev_menu_template';
 import createWindow from './helpers/window';
-
-remoteMain.initialize();
 
 import env from 'env';
 
@@ -51,8 +48,6 @@ app.on('ready', () => {
       enableRemoteModule: true, // Always enable for testing
     },
   });
-
-  remoteMain.enable(mainWindow.webContents);
 
   const appUrl = url.format({
     pathname: path.join(__dirname, 'app.html'),

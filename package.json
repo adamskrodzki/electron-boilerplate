@@ -38,7 +38,6 @@
   "devDependencies": {
     "@babel/core": "7.25.2",
     "@babel/preset-env": "7.25.4",
-    "@electron/remote": "2.1.2",
     "@testing-library/webdriverio": "3.2.1",
     "@wdio/cli": "9.0.7",
     "@wdio/local-runner": "9.0.7",
