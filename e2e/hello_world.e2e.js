@@ -1,15 +1,15 @@
-import { expect } from "chai";
-import testUtils from "./utils";
+import { browser } from '@wdio/globals';
+import { expect } from 'chai';
 
-describe("application launch", function() {
-  beforeEach(testUtils.beforeEach);
-  afterEach(testUtils.afterEach);
-
-  it("shows hello world text on screen after launch", function() {
-    return this.app.client.$("#greet").then(element => {
-      return element.getText().then(text => {
-        expect(text).to.equal("Hello World!");
-      });
-    });
+describe('Hello World', () => {
+  it('shows hello world text on screen after launch', async () => {
+    try {
+      const element = await $('#greet');
+      const text = await element.getText();
+      expect(text).to.equal('Hello World!');
+    } catch (error) {
+      console.error('Test failed with error:', error);
+      throw error;
+    }
   });
 });
