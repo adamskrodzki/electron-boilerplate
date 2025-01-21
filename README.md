@@ -77,10 +77,16 @@ Using [electron-mocha](https://github.com/jprichardson/electron-mocha) test runn
 ### End to end
 
 ```
-npm run e2e
+npm run wdio
 ```
 
-Using [Mocha](https://mochajs.org/) and [Spectron](http://electron.atom.io/spectron/). This task will run all files in `e2e` directory with `.e2e.js` extension.
+Using [WebdriverIO](https://webdriver.io/) with the Electron service for end-to-end testing. This task will run all files in `e2e` directory with `.e2e.js` extension and files in `test/specs` directory.
+
+Before running e2e tests, make sure to build the app first:
+```
+npm run build
+npm run wdio
+```
 
 ## Making a release
 

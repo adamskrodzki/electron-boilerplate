@@ -53,8 +53,8 @@ exports.config = {
             // Electron service options
             // see https://webdriver.io/docs/desktop-testing/electron/configuration/#service-options
             'wdio:electronServiceOptions': {
-                // custom application args
-                appArgs: [],
+                appBinaryPath: './dist/win-unpacked/Electron Boilerplate.exe',
+                appArgs: []
             },
         },
     ],
